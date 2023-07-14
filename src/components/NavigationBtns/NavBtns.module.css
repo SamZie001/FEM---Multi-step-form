@@ -1,0 +1,36 @@
+.page-buttons {
+  background: var(--bg-clr);
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+.next,
+.confirm {
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-s1);
+  border-radius: 7px;
+  color: var(--bg-clr);
+  margin-left: auto;
+}
+.confirm {
+  background: hsl(243, 100%, 62%);
+}
+.next:hover {
+  background: hsl(214, 72%, 32%);
+}
+.confirm:hover {
+  background: var(--purple-shade);
+}
+.previous {
+  color: var(--secondary-s1);
+  font-weight: 500;
+}
+.previous:hover {
+  color: var(--primary-s1);
+}
+
+@media (max-width: 750px) {
+  .page-buttons {
+    padding: 0.7rem 1.9rem;
+  }
+}
