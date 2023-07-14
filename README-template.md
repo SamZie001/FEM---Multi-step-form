@@ -14,16 +14,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/SamZie001/FEM-Multi-step-form)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Solution URL: [https://github.com/SamZie001/FEM-Multi-step-form]
+- Live Site URL: [https://fem-multi-step-form.onrender.com/]
 
 ### Built with
 
-- [React](https://reactjs.org/) - JS library
-- CSS
-- [Styled Components](https://styled-components.com/) - For styles
+- [https://reactjs.org/] - JS library
+- CSS - styling
+- Typescript
+- [https://mui.com/] - For styled ui components
 
 ## Author
 
