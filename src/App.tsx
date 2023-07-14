@@ -109,74 +109,76 @@ function App() {
     return setCurrentPhase(5);
   };
   return (
-    <form className="App" onSubmit={handleSubmit}>
-      <div className="phase-list pt-sm">
-        <div className="phase-list__container">
-          {phases.map((phase) => (
-            <div
-              key={phase.tag}
-              onClick={() => setCurrentPhase(phase.tag)}
-              className="phase-list__item"
-            >
-              <p
-                className={`phase-list__item__manual | w-500 ${
-                  currentPhase === phase.tag ? "active" : null
-                }`}
+    <main>
+      <form className="App" onSubmit={handleSubmit}>
+        <div className="phase-list pt-sm">
+          <div className="phase-list__container">
+            {phases.map((phase) => (
+              <div
+                key={phase.tag}
+                onClick={() => setCurrentPhase(phase.tag)}
+                className="phase-list__item"
               >
-                {phase.tag}
-              </p>
-              <div className="phase-list__item__div">
-                <p className="sm-t">STEP {phase.tag}</p>
-                <p className="w-500">{phase.desc}</p>
+                <p
+                  className={`phase-list__item__manual | w-500 ${
+                    currentPhase === phase.tag ? "active" : null
+                  }`}
+                >
+                  {phase.tag}
+                </p>
+                <div className="phase-list__item__div">
+                  <p className="sm-t">STEP {phase.tag}</p>
+                  <p className="w-500">{phase.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {currentPhase === 1 && (
-        <Page1
-          name={name}
-          setName={setName}
-          email={email}
-          setEmail={setEmail}
-          phone={phone}
-          setPhone={setPhone}
-          currentPhase={currentPhase}
-          setCurrentPhase={setCurrentPhase}
-          reqErr={reqErr}
-        />
-      )}
-      {currentPhase === 2 && (
-        <Page2
-          plans={plans}
-          setPlans={setPlans}
-          yearlyBilling={yearlyBilling}
-          setYearlyBilling={setYearlyBilling}
-          currentPhase={currentPhase}
-          setCurrentPhase={setCurrentPhase}
-        />
-      )}
-      {currentPhase === 3 && (
-        <Page3
-          adOns={adOns}
-          setAdOns={setAdOns}
-          currentPhase={currentPhase}
-          setCurrentPhase={setCurrentPhase}
-          yearly={yearlyBilling}
-        />
-      )}
-      {currentPhase === 4 && (
-        <Page4
-          yearly={yearlyBilling}
-          adOns={adOns}
-          plans={plans}
-          currentPhase={currentPhase}
-          setCurrentPhase={setCurrentPhase}
-        />
-      )}
-      {currentPhase === 5 && <Thanks />}
-    </form>
+        {currentPhase === 1 && (
+          <Page1
+            name={name}
+            setName={setName}
+            email={email}
+            setEmail={setEmail}
+            phone={phone}
+            setPhone={setPhone}
+            currentPhase={currentPhase}
+            setCurrentPhase={setCurrentPhase}
+            reqErr={reqErr}
+          />
+        )}
+        {currentPhase === 2 && (
+          <Page2
+            plans={plans}
+            setPlans={setPlans}
+            yearlyBilling={yearlyBilling}
+            setYearlyBilling={setYearlyBilling}
+            currentPhase={currentPhase}
+            setCurrentPhase={setCurrentPhase}
+          />
+        )}
+        {currentPhase === 3 && (
+          <Page3
+            adOns={adOns}
+            setAdOns={setAdOns}
+            currentPhase={currentPhase}
+            setCurrentPhase={setCurrentPhase}
+            yearly={yearlyBilling}
+          />
+        )}
+        {currentPhase === 4 && (
+          <Page4
+            yearly={yearlyBilling}
+            adOns={adOns}
+            plans={plans}
+            currentPhase={currentPhase}
+            setCurrentPhase={setCurrentPhase}
+          />
+        )}
+        {currentPhase === 5 && <Thanks />}
+      </form>
+    </main>
   );
 }
 
